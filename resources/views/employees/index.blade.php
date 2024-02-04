@@ -3,12 +3,19 @@
         <div class="row">
             <h2>Employees</h2>
             <div class="row">
-                <div class="col-lg-6">
-                <a class="btn btn-success m-1" href="/createemployee" role="button">Create Employee</button>
+                <div class="col-md-8">
+                    <a class="btn btn-secondary m-1" href="/createemployee" role="button">Create Employee</a>
                     <a class="btn btn-success" role="button">Export to Excel</a>
                 </div>
+                <form method="get" action="/">
+                <div class="col-md-4 d-flex align-items-center justify-content-end">
+                    <input class="form-control" type="search" placeholder="Search Employee..." name="search"/>
+                    <button class="btn btn-outline-success m-1" type="submit">Search</button>
+                </div>
+                </form>
             </div>
         </div>
+        
     <div id = "employeesContainer">
     <table class="table" id="dataTable">
         <thead>
