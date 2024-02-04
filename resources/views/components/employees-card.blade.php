@@ -9,7 +9,7 @@
             <td >{{$employee->contact_number}}</td>
             <td>{{$employee->email}}</td>
             <td class="text-center d-flex flex-row">
-                <a class="btn btn-primary btn-sm editBtn" href="/editemployee/{{$employee->id}}">Edit</a>
+                <a class="btn btn-primary btn-sm editBtn" href="/edit/{{$employee->id}}">Edit</a>
                 <a class="btn btn-secondary btn-sm">Calculate</a>
                 <a class="btn btn-danger btn-sm">Delete</a>
             </td>

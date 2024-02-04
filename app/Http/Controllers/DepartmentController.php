@@ -10,7 +10,7 @@ class DepartmentController extends Controller
     //Show departments data
     public function index()
     {
-        return view('/departments',[
+        return view('/departments.index',[
             'departments' => Department::all()
         ]);
     }

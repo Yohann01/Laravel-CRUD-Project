@@ -10,7 +10,7 @@ class EmployeeController extends Controller
     //Show all employee data
     public function index()
     {
-        return view('employees',[
+        return view('employees.index',[
             'employeedata' => Employee::all()
         ]);
     }
@@ -18,13 +18,13 @@ class EmployeeController extends Controller
     //Create Employee Data (not functional yet)
     public function create()
     {
-        return view('createEmployee');
+        return view('employees.create');
     }
 
     //Show single employee data
     public function edit(Employee $employee)
     {
-        return view('editEmployee',[
+        return view('employees.edit',[
             'employeedata' => $employee
         ]);
     }

@@ -33,19 +33,14 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="departments">Departments</a>
+                    <a class="nav-link" href="departments/">Departments</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     {{-- View Content --}}
-    @yield('content')
-
-
-
-
-
+    {{$slot}}
     <script src="https://cdn.datatables.net/v/bs5/dt-1.13.8/datatables.min.js"></script>
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

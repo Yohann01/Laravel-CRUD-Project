@@ -17,6 +17,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//  Common Resource Routes:
+//  index - Show all data
+//  show - Show single Data
+//  crete - Show form to crete new data
+//  store - Store new data
+//  edit - Show form to edit data
+//  update - Update data
+//  destryo - Delete data
+
 /*-----------------------------EMPLOYEE-----------------------------*/
 
 //Show Employees data 
@@ -24,12 +34,12 @@ Route::get('/', [EmployeeController::class, 'index']);
 //Create Employee Data form (not functional yet)
 Route::get('/createemployee', [EmployeeController::class, 'create']);
 //Edit Employee data form (not functional yet)
-Route::get('/editemployee/{employee}', [EmployeeController::class, 'edit']);
+Route::get('/edit/{employee}', [EmployeeController::class, 'edit']);
 
 
 /*-----------------------------DEPARTMENT-----------------------------*/
 
 //Show Departments data
-Route::get('/departments', [DepartmentController::class, 'index']);
+Route::get('/departments/index', [DepartmentController::class, 'index']);
 
 
