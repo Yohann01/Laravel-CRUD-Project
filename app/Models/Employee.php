@@ -11,6 +11,8 @@ class Employee extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['employee_number', 'first_name', 'last_name', 'birthdate',
+     'contact_number', 'email'];
 
     public function scopeFilter($query, array $filters)
     {

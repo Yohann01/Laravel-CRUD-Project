@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 //  store - Store new data
 //  edit - Show form to edit data
 //  update - Update data
-//  destryo - Delete data
+//  destroy - Delete data
 
 /*-----------------------------EMPLOYEE-----------------------------*/
 
@@ -33,7 +33,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [EmployeeController::class, 'index']);
 //Create Employee Data form (not functional yet)
 Route::get('/createemployee', [EmployeeController::class, 'create']);
-//Edit Employee data form (not functional yet)
+//Store Employee Data
+Route::post('/createemployee', [EmployeeController::class, 'store']);
+//Show dit Employee data form (not functional yet)
 Route::get('/edit/{employee}', [EmployeeController::class, 'edit']);
 
 
