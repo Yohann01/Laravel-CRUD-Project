@@ -43,13 +43,26 @@ class EmployeeController extends Controller
         
     }
 
-    //Show single employee data
     public function edit(Employee $employee)
     {
-        return view('employees.edit',[
-            'employeedata' => $employee
-        ]);
+        //dd($employee->first_name);
+        return view('employees.edit', ['employee' => $employee]);
     }
 
+    public function update(Request $request, Employee $employee)
+    {
+        $form = $request->validate([
+            'employee_number' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'birthdate' => 'required',
+            'contact_number' => 'required',
+            'email' => ['required', 'email']
+            ]);
+    
+            $employee->update($form);
+    
+            return back()->with('message', 'Employee data updated successfully!!!');
+    }
 
 }

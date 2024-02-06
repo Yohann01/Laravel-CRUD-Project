@@ -27,21 +27,17 @@ use Illuminate\Support\Facades\Route;
 //  update - Update data
 //  destroy - Delete data
 
-/*-----------------------------EMPLOYEE-----------------------------*/
 
 //Show Employees data 
 Route::get('/', [EmployeeController::class, 'index']);
-//Create Employee Data form (not functional yet)
+//Create Employee Data form 
 Route::get('/createemployee', [EmployeeController::class, 'create']);
 //Store Employee Data
 Route::post('/createemployee', [EmployeeController::class, 'store']);
-//Show dit Employee data form (not functional yet)
-Route::get('/edit/{employee}', [EmployeeController::class, 'edit']);
+//Show edit Employee data form 
+Route::get('/employee/{employee}/edit', [EmployeeController::class, 'edit']);
+//Update Employee Data
+Route::put('/employee/{employee}/edit', [EmployeeController::class, 'update']);
 
-
-/*-----------------------------DEPARTMENT-----------------------------*/
-
-//Show Departments data
-Route::get('/departments/index', [DepartmentController::class, 'index']);
 
 

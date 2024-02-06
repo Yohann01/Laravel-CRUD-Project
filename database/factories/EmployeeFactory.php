@@ -18,7 +18,6 @@ class EmployeeFactory extends Factory
     {
         return [
             'id' => $this->faker->unique()->numberBetween(1, 100),
-            'department_id' => 1,
             'employee_number' => $this->faker->numberBetween(0, 200),
             'first_name' => $this->faker->name(),
             'last_name' => $this -> faker -> name(),

@@ -22,7 +22,6 @@
         <thead>
             <tr>
                 <td>ID</td>
-                <td>Department ID</td>
                 <td>Employee Number</td>
                 <td>First Name</td>
                 <td>Last Name</td>
