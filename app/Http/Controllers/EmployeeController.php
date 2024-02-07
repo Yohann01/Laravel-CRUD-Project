@@ -43,12 +43,12 @@ class EmployeeController extends Controller
         
     }
 
+    //Show Edit Form 
     public function edit(Employee $employee)
     {
-        //dd($employee->first_name);
         return view('employees.edit', ['employee' => $employee]);
     }
-
+    //Update Employee Data
     public function update(Request $request, Employee $employee)
     {
         $form = $request->validate([
@@ -65,4 +65,11 @@ class EmployeeController extends Controller
             return back()->with('message', 'Employee data updated successfully!!!');
     }
 
+    //Delete Employee Data
+    public function destroy(Employee $employee)
+    {
+        $employee->delete();
+
+        return redirect('/')->with('message', 'Employee data deleted successfully!!!');
+    }
 }

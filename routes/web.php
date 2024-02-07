@@ -38,6 +38,7 @@ Route::post('/createemployee', [EmployeeController::class, 'store']);
 Route::get('/employee/{employee}/edit', [EmployeeController::class, 'edit']);
 //Update Employee Data
 Route::put('/employee/{employee}/edit', [EmployeeController::class, 'update']);
-
+//Delete Employee Data
+Route::delete('/employee/{employee}/delete', [EmployeeController::class, 'destroy']);
 
 
