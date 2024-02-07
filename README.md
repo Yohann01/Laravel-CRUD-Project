@@ -13,7 +13,9 @@ User-friendly CRUD application tailored for managing employee data within organi
 
 ## Homepage
 
-![image]![image](https://github.com/Yohann01/Laravel-CRUD-Project/assets/82199055/1465cd94-3741-49a7-b079-fe13fce23fd1)
+![image](https://github.com/Yohann01/Laravel-CRUD-Project/assets/82199055/1465cd94-3741-49a7-b079-fe13fce23fd1)
+
+
 
 ## Create
 
@@ -25,12 +27,15 @@ User-friendly CRUD application tailored for managing employee data within organi
 
 ## Search
 
-![Search](https://github.com/Yohann01/Laravel-CRUD-Project/assets/82199055/f986537d-516f-45d0-82d4-560ffb6314bf)
+![Search](https://github.com/Yohann01/Laravel-CRUD-Project/assets/82199055/51a0eb83-44e2-4e2f-ad93-abe6deefe081)
+
 
 
 ## Delete
 
-![Delete](https://github.com/Yohann01/Laravel-CRUD-Project/assets/82199055/8cd8ad5a-9dba-4502-bf1b-53765ae10e61)
+![Delete](https://github.com/Yohann01/Laravel-CRUD-Project/assets/82199055/e661028e-c9a2-42bf-a4a2-3480f2beb849)
+
+
 
 
 
