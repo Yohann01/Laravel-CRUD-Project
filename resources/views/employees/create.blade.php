@@ -1,7 +1,8 @@
 <x-layout>
-    <div class="container my-5 mx-auto">
+    <div class="container my-5">
         <h1> Create Employee</h1>
         <form method="POST" action="/createemployee">
+  
             @csrf
             <div class="row mb-3">
                 <label class="col-sm-2 col-form-label">Employee Number</label>
@@ -71,5 +72,6 @@
                 </div>
             </div>
         </form>
+        </div>
     </div>
 </x-layout>

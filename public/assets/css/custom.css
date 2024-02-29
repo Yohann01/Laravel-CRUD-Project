@@ -1,0 +1,14 @@
+#logout{
+    margin-right: 40px;
+}
+.logout-btn{
+    border-radius: 20px;
+    width: 100px;
+    height: 45px;
+    background-color: #212529;
+    color: white;
+}
+#title{
+    font-size: 2rem;
+    font-weight: 200px;
+}

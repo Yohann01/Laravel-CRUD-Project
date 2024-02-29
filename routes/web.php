@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\UserController;
 use App\Models\Employee;
 use App\Models\Department;
 use Illuminate\Support\Facades\Route;
@@ -29,16 +29,28 @@ use Illuminate\Support\Facades\Route;
 
 
 //Show Employees data 
-Route::get('/', [EmployeeController::class, 'index']);
+Route::get('/', [EmployeeController::class, 'index'])->middleware('auth');
+
 //Create Employee Data form 
-Route::get('/createemployee', [EmployeeController::class, 'create']);
+Route::get('/createemployee', [EmployeeController::class, 'create'])->middleware('auth');
+
 //Store Employee Data
-Route::post('/createemployee', [EmployeeController::class, 'store']);
+Route::post('/createemployee', [EmployeeController::class, 'store'])->middleware('auth');
+
 //Show edit Employee data form 
-Route::get('/employee/{employee}/edit', [EmployeeController::class, 'edit']);
+Route::get('/employee/{employee}/edit', [EmployeeController::class, 'edit'])->middleware('auth');
+
 //Update Employee Data
-Route::put('/employee/{employee}/edit', [EmployeeController::class, 'update']);
+Route::put('/employee/{employee}/edit', [EmployeeController::class, 'update'])->middleware('auth');
+
 //Delete Employee Data
-Route::delete('/employee/{employee}/delete', [EmployeeController::class, 'destroy']);
+Route::delete('/employee/{employee}/delete', [EmployeeController::class, 'destroy'])->middleware('auth');
 
+//Logout user
+Route::post('/logout', [UserController::class, 'logout']);
 
+//Show Login Form
+Route::get('/login', [UserController::class, 'login'])->name('login');
+
+//Login User
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
